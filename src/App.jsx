@@ -6,6 +6,7 @@ import Hero from './component/Hero'
 import Navbar from './component/Navbar'
 import CourseCard from './component/CourseCard'
 import Counter from './component/Counter'
+import LikeButton from './component/LikeButton'
 function App() {
  
 
@@ -14,6 +15,7 @@ function App() {
      <Navbar />
       <h1>Hello React!</h1>
       <Counter />
+      <LikeButton />
         <StudentCard  name="Kalkidan"
              department="Software Engineering"/>
          <StudentCard name="sara"
