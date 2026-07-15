@@ -12,8 +12,29 @@ const TodoApp = () => {
 
   setInput("");
 
-};
-
+    };
+  
+    const deleteTodo = (index1) => {
+      
+        {
+            const updatedTodos = todos.filter((todo, index) => { return index !== index1 });
+            setTodos(updatedTodos);
+        }
+        return (
+            <ul>
+                {todos.map((todo, index) => {
+                    return (
+                        <li key={index}>
+                            {todo}
+                             <button onClick={deleteTodo}>
+  Delete
+</button>
+                        </li>
+                    )
+                })}
+            </ul>
+        )
+}
     return (
         <>
             <input
@@ -23,12 +44,16 @@ const TodoApp = () => {
             />
             <button onClick={addTodo}>
   Add
-</button>
+            </button>
+            
            {todos.length===0?<p> not todo list found</p>:<ul>
                 {todos.map((todo, index) => {
                     return (
-                        <li key={index}>
+                        <li key={index} onClick={() => mark(index)}>
                             {todo}
+                             <button onClick={() => deleteTodo(index)}>
+  Delete
+</button>
                         </li>
                     )
                 })}
