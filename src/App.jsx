@@ -7,12 +7,14 @@ import Navbar from './component/Navbar'
 import CourseCard from './component/CourseCard'
 import Counter from './component/Counter'
 import LikeButton from './component/LikeButton'
+import Login from './component/Login'
 function App() {
  
 
   return (
     <> 
-     <Navbar />
+      <Navbar />
+      <Login />
       <h1>Hello React!</h1>
       <Counter />
       <LikeButton />
