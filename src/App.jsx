@@ -9,6 +9,7 @@ import Counter from './component/Counter'
 import LikeButton from './component/LikeButton'
 import Login from './component/Login'
 import ShowHide from './component/ShowHide'
+import ThemeToggle from './component/ThemeToggle'
 function App() {
  
 
@@ -16,6 +17,7 @@ function App() {
     <> 
       <Navbar />
       <ShowHide />
+       <ThemeToggle />
       <Login />
       <h1>Hello React!</h1>
       <Counter />
