@@ -1,0 +1,45 @@
+
+import './App.css'
+import Footer from './component/Footer'
+import StudentCard from './component/StudentCard'
+import Hero from './component/Hero'
+import Navbar from './component/Navbar'
+import CourseCard from './component/CourseCard'
+
+function App() {
+ 
+
+  return (
+    <> 
+     <Navbar />
+        <h1>Hello React!</h1>
+        <StudentCard  name="Kalkidan"
+             department="Software Engineering"/>
+         <StudentCard name="sara"
+             department="Software Engineering" />
+          <StudentCard name="beti"
+             department="Software Engineering"/>
+      <Hero />
+      <CourseCard
+  courseName="React"
+  instructor="John"
+  duration="8 Weeks"
+/>
+
+<CourseCard
+  courseName="JavaScript"
+  instructor="Sara"
+  duration="6 Weeks"
+/>
+
+<CourseCard
+  courseName="Node.js"
+  instructor="Mike"
+  duration="10 Weeks"
+/>
+     <Footer />
+    </>
+  )
+}
+
+export default App
