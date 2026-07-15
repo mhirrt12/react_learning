@@ -10,6 +10,7 @@ import LikeButton from './component/LikeButton'
 import Login from './component/Login'
 import ShowHide from './component/ShowHide'
 import ThemeToggle from './component/ThemeToggle'
+import TodoApp from './component/TodoApp'
 function App() {
  
 
@@ -17,6 +18,7 @@ function App() {
     <> 
       <Navbar />
       <ShowHide />
+        <TodoApp />
        <ThemeToggle />
       <Login />
       <h1>Hello React!</h1>
