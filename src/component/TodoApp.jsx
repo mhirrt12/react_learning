@@ -1,13 +1,12 @@
 import { useState } from 'react'
 const TodoApp = () => {
     const [todos, setTodos] = useState([
-        "Learn React",
-        "Learn JSX",
+       
     ]);
 
     return (
         <>
-            <ul>
+           {todos.length===0?<p> not todo list found</p>:<ul>
                 {todos.map((todo, index) => {
                     return (
                         <li key={index}>
@@ -15,7 +14,7 @@ const TodoApp = () => {
                         </li>
                     )
                 })}
-            </ul>
+            </ul> } 
         </>
     )
 }
