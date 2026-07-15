@@ -5,14 +5,15 @@ import StudentCard from './component/StudentCard'
 import Hero from './component/Hero'
 import Navbar from './component/Navbar'
 import CourseCard from './component/CourseCard'
-
+import Counter from './component/Counter'
 function App() {
  
 
   return (
     <> 
      <Navbar />
-        <h1>Hello React!</h1>
+      <h1>Hello React!</h1>
+      <Counter />
         <StudentCard  name="Kalkidan"
              department="Software Engineering"/>
          <StudentCard name="sara"
