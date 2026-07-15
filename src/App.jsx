@@ -8,12 +8,14 @@ import CourseCard from './component/CourseCard'
 import Counter from './component/Counter'
 import LikeButton from './component/LikeButton'
 import Login from './component/Login'
+import ShowHide from './component/ShowHide'
 function App() {
  
 
   return (
     <> 
       <Navbar />
+      <ShowHide />
       <Login />
       <h1>Hello React!</h1>
       <Counter />
