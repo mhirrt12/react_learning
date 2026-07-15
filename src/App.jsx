@@ -22,12 +22,11 @@ function App() {
       <h1>Hello React!</h1>
       <Counter />
       <LikeButton />
-        <StudentCard  name="Kalkidan"
-             department="Software Engineering"/>
-         <StudentCard name="sara"
+        <StudentCard  />
+         {/* <StudentCard name="sara"
              department="Software Engineering" />
           <StudentCard name="beti"
-             department="Software Engineering"/>
+             department="Software Engineering"/> */}
       <Hero />
       <CourseCard
   courseName="React"
