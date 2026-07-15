@@ -1,8 +1,30 @@
-const CourseCard=({courseName ,instructor ,duration})=>{
+const CourseCard = () => {
+    const courses = [
+  {
+    id: 1,
+    name: "React",
+    duration: "8 Weeks",
+  },
+  {
+    id: 2,
+    name: "JavaScript",
+    duration: "6 Weeks",
+  },
+  {
+    id: 3,
+    name: "Node.js",
+    duration: "10 Weeks",
+  },
+];
     return (<>
-       <h2> {courseName}</h2>
-       <h2>{instructor}</h2> 
-       <h2>{duration}</h2> 
+       {courses.map((course) => {
+            return (
+                <div key ={course.id}>
+                    <h1>{course.name}</h1>
+                    <h2>{course.duration}</h2>
+                </div>
+            )
+        })}  
     
 </>
     );

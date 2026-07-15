@@ -28,13 +28,9 @@ function App() {
           <StudentCard name="beti"
              department="Software Engineering"/> */}
       <Hero />
-      <CourseCard
-  courseName="React"
-  instructor="John"
-  duration="8 Weeks"
-/>
+      <CourseCard />
 
-<CourseCard
+{/* <CourseCard
   courseName="JavaScript"
   instructor="Sara"
   duration="6 Weeks"
@@ -44,7 +40,7 @@ function App() {
   courseName="Node.js"
   instructor="Mike"
   duration="10 Weeks"
-/>
+/> */}
      <Footer />
     </>
   )
