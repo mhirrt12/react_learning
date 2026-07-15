@@ -13,7 +13,16 @@ const TodoApp = () => {
   setInput("");
 
     };
-  
+    const mark = (index1) => {
+        const updatedTodos = todos.map((todo, index) => {
+            if (index === index1) {
+                return todo + " ✅";
+            }
+            return todo;
+        });
+        setTodos(updatedTodos);
+        
+    }
     const deleteTodo = (index1) => {
       
         {
