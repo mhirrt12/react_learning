@@ -11,12 +11,14 @@ import Login from './component/Login'
 import ShowHide from './component/ShowHide'
 import ThemeToggle from './component/ThemeToggle'
 import TodoApp from './component/TodoApp'
+import App2 from './component/App2'
 function App() {
  
 
   return (
     <> 
       <Navbar />
+      <App2 />
       <ShowHide />
         <TodoApp />
        <ThemeToggle />
