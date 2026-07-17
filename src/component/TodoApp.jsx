@@ -13,37 +13,39 @@ const TodoApp = () => {
   setInput("");
 
     };
-    const mark = (index1) => {
-        const updatedTodos = todos.map((todo, index) => {
-            if (index === index1) {
-                return todo + " ✅";
-            }
-            return todo;
-        });
-        setTodos(updatedTodos);
+
+
+    // const mark = (index1) => {
+    //     const updatedTodos = todos.map((todo, index) => {
+    //         if (index === index1) {
+    //             return todo + " ✅";
+    //         }
+    //         return todo;
+    //     });
+    //     setTodos(updatedTodos);
         
-    }
-    const deleteTodo = (index1) => {
-      
-        {
-            const updatedTodos = todos.filter((todo, index) => { return index !== index1 });
+    // }
+  const editTodo = (index1) => {
+        const newTodo = prompt("Edit the todo:", todos[index1]);
+        if (newTodo !== null && newTodo.trim() !== "") {
+            const updatedTodos = todos.map((todo, index) => {   
+                if (index === index1) {
+                    return newTodo;
+                }
+                return todo;
+            });
             setTodos(updatedTodos);
         }
-        return (
-            <ul>
-                {todos.map((todo, index) => {
-                    return (
-                        <li key={index}>
-                            {todo}
-                             <button onClick={deleteTodo}>
-  Delete
-</button>
-                        </li>
-                    )
-                })}
-            </ul>
-        )
-}
+    };
+
+    const deleteTodo = (index1) => {
+            const updatedTodos = todos.filter((todo, index) => { return index !== index1 });
+            setTodos(updatedTodos);
+    }
+    
+
+
+
     return (
         <>
             <input
@@ -58,10 +60,13 @@ const TodoApp = () => {
            {todos.length===0?<p> not todo list found</p>:<ul>
                 {todos.map((todo, index) => {
                     return (
-                        <li key={index} onClick={() => mark(index)}>
+                        <li key={index} >
                             {todo}
-                             <button onClick={() => deleteTodo(index)}>
+<button onClick={() => deleteTodo(index)}>
   Delete
+</button>
+ <button onClick={() => editTodo(index)}>
+  Edit
 </button>
                         </li>
                     )
