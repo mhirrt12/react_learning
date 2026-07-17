@@ -13,6 +13,7 @@ import ThemeToggle from './component/ThemeToggle'
 import TodoApp from './component/TodoApp'
 import App2 from './component/App2'
 import PageTitle from './component/PageTitle'
+import Users from './component/Users'
 function App() {
  
 
@@ -20,6 +21,7 @@ function App() {
     <> 
       <Navbar />
       <PageTitle />
+      <Users />
       <App2 />
       <ShowHide />
         <TodoApp />
