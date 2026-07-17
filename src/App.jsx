@@ -19,6 +19,7 @@ function App() {
   return (
     <> 
       <Navbar />
+      <PageTitle />
       <App2 />
       <ShowHide />
         <TodoApp />
