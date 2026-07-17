@@ -12,6 +12,7 @@ import ShowHide from './component/ShowHide'
 import ThemeToggle from './component/ThemeToggle'
 import TodoApp from './component/TodoApp'
 import App2 from './component/App2'
+import PageTitle from './component/PageTitle'
 function App() {
  
 
