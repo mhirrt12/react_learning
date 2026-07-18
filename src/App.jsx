@@ -15,12 +15,14 @@ import App2 from './component/App2'
 import PageTitle from './component/PageTitle'
 import Users from './component/Users'
 import Posts from './component/Posts'
+import CreatePost from './component/CreatePost'
 function App() {
  
 
   return (
     <> 
       <Navbar />
+      <CreatePost />
       <Posts />
       <PageTitle />
       <Users />
