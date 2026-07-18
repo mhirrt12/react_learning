@@ -16,25 +16,45 @@ import PageTitle from './component/PageTitle'
 import Users from './component/Users'
 import Posts from './component/Posts'
 import CreatePost from './component/CreatePost'
+import Home from './component/pages/Home'
+import About from './component/pages/About'
+import Contact from './component/pages/Contact'
+import { Routes, Route } from 'react-router-dom'
 function App() {
  
 
   return (
     <> 
       <Navbar />
+      <Routes >
+         <Route
+        path="/"
+        element={<Home />}
+        />
+          <Route
+        path="/about"
+        element={<About />}
+        />
+          <Route
+        path="/contact"
+        element={<Contact />}
+    />
+      </Routes>
       <CreatePost />
       <Posts />
+       {/* <Users /> */}
       <PageTitle />
-      <Users />
-      <App2 />
-      <ShowHide />
-        <TodoApp />
-       <ThemeToggle />
+     
+      
+<App2 />
+      <TodoApp />
       <Login />
+      <ThemeToggle />
+      <ShowHide />
+      <LikeButton />
       <h1>Hello React!</h1>
       <Counter />
-      <LikeButton />
-        <StudentCard  />
+        <StudentCard />
          {/* <StudentCard name="sara"
              department="Software Engineering" />
           <StudentCard name="beti"
