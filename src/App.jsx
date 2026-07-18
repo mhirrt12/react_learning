@@ -14,12 +14,14 @@ import TodoApp from './component/TodoApp'
 import App2 from './component/App2'
 import PageTitle from './component/PageTitle'
 import Users from './component/Users'
+import Posts from './component/Posts'
 function App() {
  
 
   return (
     <> 
       <Navbar />
+      <Posts />
       <PageTitle />
       <Users />
       <App2 />
