@@ -4,6 +4,7 @@ import ThemeToggle from "./context/ThemeToggle";
 import Counter from "./component/Counter";
 import LikeButton from "./component/LikeButton";
 import MessageButton from "./component/MessageButton"
+import { RegistrationForm } from "./component/RegistrationForm";
 
 function App() {
   const { isDark } = useContext(ThemeContext);
@@ -18,6 +19,7 @@ function App() {
       }}
     >
       <ThemeToggle />
+<RegistrationForm />
       <LikeButton />
       <h1>Context API Theme App</h1>
       <Counter /><br />
