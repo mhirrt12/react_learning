@@ -1,14 +1,14 @@
-import { useState } from 'react'
 
-
+import useCounter from "../hooks/useCounter";
 
 const LikeButton = () => {
-    const [like, setLike] = useState(0)
+    const { count, increase, decrease, reset } = useCounter();
+
     return (
         <>
-            <h1>Like🩷: {like}</h1>
-             <button onClick={() => setLike(like + 1)}>Like👍</button>
-             <button onClick={() => setLike(0)}>Reset</button>
+            <h1>Like🩷: {count}</h1>
+             <button onClick={increase}>Like👍</button>
+             <button onClick={reset}>Reset</button>
        </>
     )
 }
