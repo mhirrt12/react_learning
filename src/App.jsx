@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import { ThemeContext } from "./context/ThemeContext";
-import ThemeToggle from "./components/ThemeToggle";
+import ThemeToggle from "./context/ThemeToggle";
+import Counter from "./component/Counter";
+import LikeButton from "./component/LikeButton";
+import MessageButton from "./component/MessageButton"
 
 function App() {
   const { isDark } = useContext(ThemeContext);
@@ -15,7 +18,11 @@ function App() {
       }}
     >
       <ThemeToggle />
+      <LikeButton />
       <h1>Context API Theme App</h1>
+      <Counter /><br />
+      <MessageButton />
+
     </div>
   );
 }
