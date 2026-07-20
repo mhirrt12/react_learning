@@ -5,7 +5,7 @@ import Counter from "./component/Counter";
 import LikeButton from "./component/LikeButton";
 import MessageButton from "./component/MessageButton"
 import { RegistrationForm } from "./component/RegistrationForm";
-
+import Register from "./component/Register";
 function App() {
   const { isDark } = useContext(ThemeContext);
 
@@ -24,7 +24,7 @@ function App() {
       <h1>Context API Theme App</h1>
       <Counter /><br />
       <MessageButton />
-
+      <Register />
     </div>
   );
 }
