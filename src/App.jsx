@@ -7,6 +7,7 @@ import MessageButton from "./component/MessageButton"
 import { RegistrationForm } from "./component/RegistrationForm";
 import Register from "./component/Register";
 import FocusInput from "./component/FocusInput";
+import Counter2 from "./component/Counter2";
 function App() {
   const { isDark } = useContext(ThemeContext);
 
@@ -20,6 +21,7 @@ function App() {
       }}
     >
       <ThemeToggle />
+      <Counter2 />
 <FocusInput />  
 <RegistrationForm />
       <LikeButton />
