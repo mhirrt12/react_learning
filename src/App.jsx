@@ -6,6 +6,7 @@ import LikeButton from "./component/LikeButton";
 import MessageButton from "./component/MessageButton"
 import { RegistrationForm } from "./component/RegistrationForm";
 import Register from "./component/Register";
+import FocusInput from "./component/FocusInput";
 function App() {
   const { isDark } = useContext(ThemeContext);
 
@@ -19,6 +20,7 @@ function App() {
       }}
     >
       <ThemeToggle />
+<FocusInput />  
 <RegistrationForm />
       <LikeButton />
       <h1>Context API Theme App</h1>
