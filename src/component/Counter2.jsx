@@ -1,73 +1,113 @@
-import { useReducer } from "react";
+// import { useReducer } from "react";
 
-const initialState = {
-  count:0
-};
+// const initialState = {
+//   count:0
+// };
 
-function reducer(state,action){
+// function reducer(state,action){
 
-switch(action.type){
+// switch(action.type){
 
-case "increment":
+// case "increment":
 
-return {
- count:state.count+1
-};
+// return {
+//  count:state.count+1
+// };
 
-case "decrement":
+// case "decrement":
 
-return {
- count:state.count-1
-};
+// return {
+//  count:state.count-1
+// };
 
-case "reset":
+// case "reset":
 
-return {
- count:0
-};
+// return {
+//  count:0
+// };
 
-default:
+// default:
 
-return state;
+// return state;
 
-}
+// }
 
-}
+// }
 
-function Counter2(){
+// function Counter2(){
 
-const [state,dispatch]=useReducer(
-reducer,
-initialState
+// const [state,dispatch]=useReducer(
+// reducer,
+// initialState
+// );
+
+// return(
+
+// <>
+
+// <h1>{state.count}</h1>
+
+// <button
+// onClick={()=>dispatch({type:"increment"})}
+// >
+// +
+// </button>
+
+// <button
+// onClick={()=>dispatch({type:"decrement"})}
+// >
+// -
+// </button>
+
+// <button
+// onClick={()=>dispatch({type:"reset"})}
+// >
+// Reset
+// </button>
+
+// </>
+
+// );
+
+// }
+// export default Counter2;
+import { useSelector, useDispatch } from "react-redux";
+import { increment, decrement, reset } from "../features/counter/counterSlice.js";
+
+
+const Counter =()=>{
+
+const count = useSelector(
+(state)=>state.counter.value
 );
 
+
+const dispatch = useDispatch();
+
+
 return(
-
 <>
+<h1>{count}</h1>
 
-<h1>{state.count}</h1>
 
-<button
-onClick={()=>dispatch({type:"increment"})}
->
+<button onClick={()=>dispatch(increment())}>
 +
 </button>
 
-<button
-onClick={()=>dispatch({type:"decrement"})}
->
+
+<button onClick={()=>dispatch(decrement())}>
 -
 </button>
 
-<button
-onClick={()=>dispatch({type:"reset"})}
->
+
+<button onClick={()=>dispatch(reset())}>
 Reset
 </button>
 
-</>
 
-);
+</>
+)
 
 }
-export default Counter2;
+
+export default Counter;
